@@ -7,6 +7,9 @@ const bodyParser = require("body-parser")
 app.engine("handlebars", exphbs({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
 
+// setting static files==>會先去看public資料夾
+app.use(express.static("public"))
+
 // setting body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 
