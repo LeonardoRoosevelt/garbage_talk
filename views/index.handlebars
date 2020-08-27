@@ -1,42 +1,45 @@
 <h4 class="mb-2">你想對誰說幹話?</h4>
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-12 col-12 mx-auto">
-      <div class="card-columns">
-        <div class="card mb-4 ">
-          <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
-            alt="工程師">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label">工程師</label>
+<form action="/" method="POST">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 col-12 mx-auto">
+        <div class="card-columns">
+          <div class="card mb-4 ">
+            <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              alt="工程師">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="target" id="target" value="engineer" >
+              <label class="form-check-label">工程師</label>
+            </div>
           </div>
-        </div>
-        <div class="card mb-4">
-          <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
-            alt="設計師">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label">設計師</label>
+          <div class="card mb-4">
+            <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              alt="設計師">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="target" id="target" value="designer" >
+              <label class="form-check-label">設計師</label>
+            </div>
           </div>
-        </div>
-        <div class="card mb-4">
-          <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
-            alt="創業家">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-            <label class="form-check-label">創業家</label>
+          <div class="card mb-4">
+            <img class="card-img-top" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              alt="創業家">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="target" id="target" value="entrepreneur" >
+              <label class="form-check-label">創業家</label>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row d-flex justify-content-between">
-    <div class="buttonInput col-2">
-      <button type="button" class="btn btn-primary">產生幹話</button>
+    <div class="row">
+      <div class="buttonInput col-2">
+        <button type="submit" class="btn btn-primary">產生幹話</button>
+      </div>
+      {{#if sentence}}
+      <div class="textarea col-10">
+        <textarea class="form-control" id="textarea" rows="3">{{sentence}}</textarea>
+      </div>
+      {{/if}}
     </div>
-    <div class="textarea col-10">
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
   </div>
-</div>
+</form>
